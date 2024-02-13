@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Урок</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="lessons.html">Уроки</a></li>
+                </ul>
+                <div class="burger">&#9776;</div>
+            </nav>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="container">
+            <h1 id="lesson-title">Урок</h1>
+            <p id="lesson-description">Описание урока</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>© 2024</p>
+        </div>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const lessonNumber = urlParams.get('lesson');
+
+        let lessonTitle = "";
+        let lessonDescription = "";
+        if (lessonNumber === "1") {
+            lessonTitle = "Урок 1";
+            lessonDescription = "Описание урока 1";
+        } else if (lessonNumber === "2") {
+            lessonTitle = "Урок 2";
+            lessonDescription = "Описание урока 2";
+        } else if (lessonNumber === "3") {
+            lessonTitle = "Урок 3";
+            lessonDescription = "Описание урока 3";
+        }
+        document.getElementById("lesson-title").innerText = lessonTitle;
+        document.getElementById("lesson-description").innerText = lessonDescription;
+    </script>
+</body>
+</html>

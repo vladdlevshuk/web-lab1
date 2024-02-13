@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Уроки</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <input type="checkbox" id="toggle-menu">
+        <label class="burger" for="toggle-menu">&#9776;</label>
+        <label class="cross" for="toggle-menu">&#10005;</label>
+        <nav>
+            <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="lessons.html">Уроки</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="container">
+            <h1>Список уроков</h1>
+            <button id="addLessonBtn">Добавить урок</button>
+            <table id="lessonsTable">
+                <tr>
+                    <th>Номер урока</th>
+                    <th>Название урока</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="lesson.html?lesson=1">Урок 1</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="lesson.html?lesson=2">Урок 2</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="lesson.html?lesson=3">Урок 3</a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>© 2024</p>
+        </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Добавить новый урок</h2>
+          <form id="lessonForm">
+            <label for="lessonTitle">Название урока:</label>
+            <input type="text" id="lessonTitle" name="lessonTitle">
+            <label for="lessonDescription">Описание урока:</label>
+            <textarea id="lessonDescription" name="lessonDescription"></textarea>
+            <button class="submit" type="submit">Добавить</button>
+          </form>
+        </div>
+    </div>
+    <script src="./js/lessons.js"></script>
+</body>
+</html>
