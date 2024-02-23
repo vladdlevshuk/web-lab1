@@ -74,16 +74,16 @@ header nav {
   display: block;
 }
 
+#toggle-menu:checked ~ nav .nav-links {
+  display: block;
+}
+
 .nav-links {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
   display: flex;
-}
-
-#toggle-menu:checked ~ nav .nav-links {
-  display: block;
 }
 
 h1 {
@@ -115,7 +115,14 @@ h1 {
 }
 
 footer {
-    margin-top: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -216,4 +223,20 @@ th {
   width: 120px;
   height: 30px;
   margin-bottom: 20px;
+}
+
+#lesson-comment {
+  min-width: 500px;
+  height: 100px;
+}
+
+.lesson-comments {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-comment-btn {
+  margin-top: 15px;
+  width: 200px;
+  height: 30px;
 }

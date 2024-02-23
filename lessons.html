@@ -9,15 +9,15 @@
 <body>
     <header>
         <div class="header-container">
-        <input type="checkbox" id="toggle-menu">
-        <label class="burger" for="toggle-menu">&#9776;</label>
-        <label class="cross" for="toggle-menu">&#10005;</label>
-        <nav>
-            <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="lessons.html">Уроки</a></li>
-            </ul>
-        </nav>
+            <input type="checkbox" id="toggle-menu">
+            <label class="burger" for="toggle-menu">&#9776;</label>
+            <label class="cross" for="toggle-menu">&#10005;</label>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="lessons.html">Уроки</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <section class="main-content">
@@ -31,15 +31,15 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><a href="lesson.html?lesson=1">Урок 1</a></td>
+                    <td><a href="lesson.html?lesson=1">Введение в веб-разработку</a></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="lesson.html?lesson=2">Урок 2</a></td>
+                    <td><a href="lesson.html?lesson=2">Основы HTML и CSS</a></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="lesson.html?lesson=3">Урок 3</a></td>
+                    <td><a href="lesson.html?lesson=3">Знакомство с JavaScript</a></td>
                 </tr>
             </table>
         </div>
@@ -51,15 +51,21 @@
     </footer>
     <div id="myModal" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Добавить новый урок</h2>
-          <form id="lessonForm">
-            <label for="lessonTitle">Название урока:</label>
-            <input type="text" id="lessonTitle" name="lessonTitle">
-            <label for="lessonDescription">Описание урока:</label>
-            <textarea id="lessonDescription" name="lessonDescription"></textarea>
-            <button class="submit" type="submit">Добавить</button>
-          </form>
+            <span class="close">&times;</span>
+            <h2>Добавить новый урок</h2>
+            <form id="lessonForm">
+                <label for="lessonTitle">Название урока:</label>
+                <input type="text" id="lessonTitle" name="lessonTitle">
+                <label for="lessonDescription">Описание урока:</label>
+                <textarea id="lessonDescription" name="lessonDescription"></textarea>
+                <label for="lessonDate">Дата добавления:</label>
+                <input type="text" id="lessonDate" name="lessonDate">
+                <label for="lessonAuthor">Автор урока:</label>
+                <input type="text" id="lessonAuthor" name="lessonAuthor">
+                <label for="lessonImage">Изображение урока:</label>
+                <input type="file" id="lessonImage" name="lessonImage" accept="image/*">
+                <button class="submit" type="submit">Добавить</button>
+            </form>
         </div>
     </div>
     <script src="./js/lessons.js"></script>

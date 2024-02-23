@@ -9,12 +9,14 @@
 <body>
     <header>
         <div class="header-container">
+            <input type="checkbox" id="toggle-menu">
+            <label class="burger" for="toggle-menu">&#9776;</label>
+            <label class="cross" for="toggle-menu">&#10005;</label>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="lessons.html">Уроки</a></li>
                 </ul>
-                <div class="burger">&#9776;</div>
             </nav>
         </div>
     </header>
@@ -22,6 +24,17 @@
         <div class="container">
             <h1 id="lesson-title">Урок</h1>
             <p id="lesson-description">Описание урока</p>
+            <img id="lesson-image" src="#" alt="Изображение урока">
+            <div class="lesson-info">
+                <h2>Информация о уроке</h2>
+                <p><strong>Дата добавления:</strong> <span id="lesson-date">[дата]</span></p>
+                <p><strong>Автор:</strong> <span id="lesson-author">[автор]</span></p>
+            </div>
+            <div class="lesson-comments">
+                <h2>Комментарии</h2>
+                <textarea id="lesson-comment" placeholder="Напишите комментарий..."></textarea>
+                <button id="add-comment-btn">Добавить комментарий</button>
+            </div>
         </div>
     </section>
     <footer>
@@ -35,18 +48,28 @@
 
         let lessonTitle = "";
         let lessonDescription = "";
+        let lessonAuthor = "";
+        let lessonDate = "";
         if (lessonNumber === "1") {
-            lessonTitle = "Урок 1";
-            lessonDescription = "Описание урока 1";
+            lessonTitle = "Введение в веб-разработку";
+            lessonDescription = "Этот урок представляет собой вводное занятие в веб-разработку. Вы познакомитесь с основными концепциями и инструментами, необходимыми для создания веб-сайтов. От HTML и CSS до основ JavaScript - мы рассмотрим ключевые аспекты, которые помогут вам начать свой путь в мире веб-разработки.";
+            lessonAuthor = "Анатолий Жмых";
+            lessonDate = "21.07.23";
         } else if (lessonNumber === "2") {
-            lessonTitle = "Урок 2";
-            lessonDescription = "Описание урока 2";
+            lessonTitle = "Основы HTML и CSS";
+            lessonDescription = "На этом уроке мы углубимся в основы HTML и CSS - два основных языка веб-разработки. Вы изучите структуру HTML-документа, разметку элементов, каскадные таблицы стилей (CSS) и основные свойства форматирования. По окончании этого урока вы сможете создавать простые веб-страницы с помощью HTML и стилизовать их с помощью CSS.";
+            lessonAuthor = "Павел Жмых";
+            lessonDate = "14.08.23";
         } else if (lessonNumber === "3") {
-            lessonTitle = "Урок 3";
-            lessonDescription = "Описание урока 3";
+            lessonTitle = "Знакомство с JavaScript";
+            lessonDescription = "Этот урок посвящен знакомству с JavaScript - языком программирования, который делает ваши веб-сайты интерактивными и динамичными. Мы рассмотрим основы синтаксиса JavaScript, переменные, операторы, условия, циклы, функции и многое другое. После завершения этого урока вы сможете добавлять интерактивные элементы на ваши веб-страницы и делать их более функциональными.";
+            lessonAuthor = "Игорь Жмых";
+            lessonDate = "25.08.23";
         }
         document.getElementById("lesson-title").innerText = lessonTitle;
         document.getElementById("lesson-description").innerText = lessonDescription;
+        document.getElementById("lesson-author").innerText = lessonAuthor;
+        document.getElementById("lesson-date").innerText = lessonDate;
     </script>
 </body>
 </html>
